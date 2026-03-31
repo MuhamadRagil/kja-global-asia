@@ -1,287 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kantor Jasa Akuntan Global Asia</title>
-    <meta
-      name="description"
-      content="Kantor Jasa Akuntan Global Asia menyediakan layanan akuntansi, perpajakan, dan advisory bisnis yang profesional untuk membantu perusahaan menjaga kepatuhan dan pertumbuhan berkelanjutan."
-    />
-    <link rel="icon" type="image/png" href="/images/logo.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="/src/main.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kantor Jasa Akuntan Global Asia</title>
+  <meta name="description" content="Kantor Jasa Akuntan Global Asia menyediakan layanan akuntansi, perpajakan, dan advisory bisnis profesional untuk membantu perusahaan menjaga kepatuhan dan kejelasan keuangan." />
+  <link rel="icon" type="image/png" href="public/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="beranda" class="site-header">
+    <nav id="navbar" class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="#beranda" aria-label="Beranda Kantor Jasa Akuntan Global Asia">
+          <img src="public/images/logo.png" alt="Logo Kantor Jasa Akuntan Global Asia" />
+          <span>Kantor Jasa Akuntan<br>Global Asia</span>
+        </a>
 
-  <body>
-    <header id="home" class="relative bg-darkgreen text-white">
-      <nav id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#home" class="flex items-center gap-3" aria-label="Beranda Kantor Jasa Akuntan Global Asia">
-            <img src="/images/logo.png" alt="Logo Kantor Jasa Akuntan Global Asia" class="h-12 w-auto" />
-            <span class="text-sm font-semibold leading-tight md:text-base">
-              Kantor Jasa Akuntan<br />
-              Global Asia
-            </span>
-          </a>
+        <button id="menuButton" class="menu-button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
 
-          <button
-            id="mobile-menu-button"
-            class="rounded-md border border-white/30 p-2 text-white md:hidden"
-            aria-label="Buka navigasi"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          <div class="hidden items-center gap-8 md:flex">
-            <a href="#tentang" class="nav-link">Tentang</a>
-            <a href="#layanan" class="nav-link">Layanan</a>
-            <a href="#keunggulan" class="nav-link">Keunggulan</a>
-            <a href="#kontak" class="nav-link">Kontak</a>
-            <a href="https://wa.me/6281280565550" class="btn-primary">Konsultasi WhatsApp</a>
-          </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden border-t border-white/15 bg-darkgreen/95 px-6 py-4 md:hidden">
-          <div class="flex flex-col gap-3 text-sm">
-            <a href="#tentang" class="mobile-link">Tentang</a>
-            <a href="#layanan" class="mobile-link">Layanan</a>
-            <a href="#keunggulan" class="mobile-link">Keunggulan</a>
-            <a href="#kontak" class="mobile-link">Kontak</a>
-            <a href="https://wa.me/6281280565550" class="btn-primary mt-2 text-center">Konsultasi WhatsApp</a>
-          </div>
-        </div>
-      </nav>
-
-      <section class="hero-bg relative overflow-hidden pb-24 pt-36 md:pb-28 md:pt-44">
-        <div class="absolute inset-0 bg-gradient-to-r from-darkgreen/95 via-darkgreen/85 to-black/55"></div>
-        <div class="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:items-center lg:px-8">
-          <div class="fade-up lg:col-span-7">
-            <p class="mb-5 inline-block rounded-full border border-gold/40 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-gold">
-              Akuntansi • Pajak • Advisory Bisnis
-            </p>
-            <h1 class="font-playfair text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
-              Mitra Profesional untuk Kepatuhan Pajak dan Kejelasan Keuangan Perusahaan
-            </h1>
-            <p class="mt-7 max-w-2xl text-base leading-relaxed text-gray-200 md:text-lg">
-              Kantor Jasa Akuntan Global Asia membantu pemilik usaha, direktur, dan manajemen perusahaan memperoleh laporan keuangan yang andal, strategi perpajakan yang patuh regulasi, serta dukungan konsultatif untuk keputusan bisnis yang lebih terukur.
-            </p>
-            <div class="mt-9 flex flex-wrap gap-4">
-              <a href="https://wa.me/6281280565550" class="btn-primary">Jadwalkan Konsultasi</a>
-              <a href="#layanan" class="btn-secondary">Lihat Ruang Lingkup Layanan</a>
-            </div>
-          </div>
-
-          <aside class="fade-up lg:col-span-5" aria-label="Ringkasan legal dan profil perusahaan">
-            <div class="glass-card rounded-2xl p-7 md:p-8">
-              <h2 class="font-playfair text-2xl text-white">Profil Resmi Perusahaan</h2>
-              <dl class="mt-6 space-y-4 text-sm text-gray-100">
-                <div>
-                  <dt class="text-gold">Nama Perusahaan</dt>
-                  <dd>Kantor Jasa Akuntan Global Asia</dd>
-                </div>
-                <div>
-                  <dt class="text-gold">Owner</dt>
-                  <dd>Hendra Kurniawan, CA</dd>
-                </div>
-                <div>
-                  <dt class="text-gold">Nomor Izin</dt>
-                  <dd>306/MK/SK.5/2025</dd>
-                </div>
-                <div>
-                  <dt class="text-gold">Bentuk Usaha</dt>
-                  <dd>Perseroan Terbatas (PT)</dd>
-                </div>
-              </dl>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section id="tentang" class="section bg-white">
-        <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-8">
-          <div class="fade-up lg:col-span-6">
-            <p class="section-label">Tentang Kami</p>
-            <h2 class="section-title">Pendampingan Akuntansi dan Perpajakan yang Terstruktur</h2>
-            <p class="section-body">
-              Kami berkomitmen menghadirkan layanan akuntansi dan perpajakan yang akurat, tepat waktu, serta sesuai ketentuan perundang-undangan yang berlaku. Dengan pendekatan yang sistematis, kami membantu perusahaan menjaga tata kelola keuangan, meminimalkan risiko kepatuhan, dan memperkuat dasar pengambilan keputusan manajerial.
-            </p>
-            <p class="section-body mt-4">
-              Setiap layanan dirancang berdasarkan kebutuhan bisnis klien, mulai dari operasional harian hingga dukungan strategis untuk pertumbuhan jangka panjang.
-            </p>
-          </div>
-          <div class="fade-up lg:col-span-6">
-            <img src="/images/office.jpg" alt="Aktivitas profesional Kantor Jasa Akuntan Global Asia" class="h-[420px] w-full rounded-2xl object-cover shadow-soft" />
-          </div>
-        </div>
-      </section>
-
-      <section id="layanan" class="section bg-gray-50">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="fade-up mx-auto max-w-3xl text-center">
-            <p class="section-label justify-center">Layanan Utama</p>
-            <h2 class="section-title">Ruang Lingkup Layanan Profesional</h2>
-            <p class="section-body">
-              Solusi yang kami sediakan difokuskan untuk meningkatkan ketertiban administrasi, kepatuhan perpajakan, serta kualitas informasi keuangan perusahaan.
-            </p>
-          </div>
-
-          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="fade-up service-card">
-              <h3>Jasa Akuntansi</h3>
-              <p>Pencatatan transaksi dan penyusunan laporan keuangan periodik yang akurat untuk mendukung kontrol internal perusahaan.</p>
-            </article>
-            <article class="fade-up service-card">
-              <h3>Jasa Perpajakan</h3>
-              <p>Perhitungan, penyetoran, dan pelaporan kewajiban pajak badan secara tepat waktu sesuai regulasi yang berlaku.</p>
-            </article>
-            <article class="fade-up service-card">
-              <h3>Penyusunan Laporan Keuangan</h3>
-              <p>Penyajian laporan laba rugi, posisi keuangan, dan arus kas untuk kebutuhan manajemen, mitra, dan pemangku kepentingan.</p>
-            </article>
-            <article class="fade-up service-card">
-              <h3>Konsultasi Kepatuhan Pajak</h3>
-              <p>Analisis risiko perpajakan dan rekomendasi perbaikan agar proses administrasi pajak lebih tertib serta minim koreksi.</p>
-            </article>
-            <article class="fade-up service-card">
-              <h3>Pendampingan Administrasi Keuangan</h3>
-              <p>Dukungan penyusunan SOP dokumen keuangan dan alur administrasi untuk meningkatkan efisiensi operasional.</p>
-            </article>
-            <article class="fade-up service-card">
-              <h3>Konsultasi Bisnis dan Advisory</h3>
-              <p>Diskusi strategis berbasis data keuangan untuk membantu manajemen menentukan langkah bisnis yang prudent.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="keunggulan" class="section bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="fade-up mx-auto max-w-3xl text-center">
-            <p class="section-label justify-center">Mengapa Memilih Kami</p>
-            <h2 class="section-title">Fokus pada Kepatuhan, Ketelitian, dan Kepercayaan</h2>
-          </div>
-
-          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <article class="fade-up feature-card">
-              <h3>Patuh Regulasi</h3>
-              <p>Seluruh proses layanan diarahkan untuk menjaga kepatuhan terhadap ketentuan perpajakan dan administrasi keuangan.</p>
-            </article>
-            <article class="fade-up feature-card">
-              <h3>Ketelitian Data</h3>
-              <p>Setiap dokumen direview secara sistematis agar informasi keuangan yang disajikan lebih andal dan dapat dipertanggungjawabkan.</p>
-            </article>
-            <article class="fade-up feature-card">
-              <h3>Komunikasi Profesional</h3>
-              <p>Kami menjaga komunikasi yang jelas, responsif, dan terstruktur agar klien memahami progres pekerjaan secara berkala.</p>
-            </article>
-            <article class="fade-up feature-card">
-              <h3>Dukungan Strategis</h3>
-              <p>Tidak hanya administrasi, kami juga mendampingi manajemen dalam membaca data keuangan untuk keputusan bisnis.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section bg-gray-50">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="fade-up rounded-2xl bg-darkgreen px-7 py-10 text-white shadow-soft md:px-12 md:py-12">
-            <p class="section-label text-gold">Indikator Kepercayaan</p>
-            <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div>
-                <p class="text-4xl font-bold text-gold">2025</p>
-                <p class="mt-2 text-sm text-gray-200">Nomor Izin Resmi KJA: 306/MK/SK.5/2025</p>
-              </div>
-              <div>
-                <p class="text-4xl font-bold text-gold">PT</p>
-                <p class="mt-2 text-sm text-gray-200">Badan usaha berbentuk Perseroan Terbatas dengan tata kelola profesional</p>
-              </div>
-              <div>
-                <p class="text-4xl font-bold text-gold">CA</p>
-                <p class="mt-2 text-sm text-gray-200">Dipimpin oleh Hendra Kurniawan, CA untuk kualitas layanan yang terjaga</p>
-              </div>
-              <div>
-                <p class="text-4xl font-bold text-gold">NPWP</p>
-                <p class="mt-2 text-sm text-gray-200">1000 0000 0817 9267 sebagai identitas perpajakan perusahaan</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="kontak" class="section bg-white">
-        <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-12 lg:px-8">
-          <div class="fade-up lg:col-span-7">
-            <p class="section-label">Konsultasi</p>
-            <h2 class="section-title">Diskusikan Kebutuhan Akuntansi dan Perpajakan Perusahaan Anda</h2>
-            <p class="section-body">
-              Tim kami siap membantu Anda menyusun langkah yang lebih terukur untuk kepatuhan pajak, ketertiban laporan keuangan, dan efisiensi administrasi bisnis.
-            </p>
-            <div class="mt-7 flex flex-wrap gap-4">
-              <a href="https://wa.me/6281280565550" class="btn-primary">Konsultasi via WhatsApp</a>
-              <a href="mailto:hendra.kurniawan.tara@gmail.com" class="btn-secondary text-primary border-primary hover:bg-primary hover:text-white">
-                Kirim Email Resmi
-              </a>
-            </div>
-          </div>
-
-          <aside class="fade-up rounded-2xl border border-gray-200 bg-gray-50 p-7 shadow-soft lg:col-span-5">
-            <h3 class="text-xl font-semibold text-primary">Informasi Kontak Resmi</h3>
-            <ul class="mt-5 space-y-3 text-sm leading-relaxed text-gray-700">
-              <li><strong>Nama:</strong> Kantor Jasa Akuntan Global Asia</li>
-              <li><strong>Owner:</strong> Hendra Kurniawan, CA</li>
-              <li><strong>Telepon/WhatsApp:</strong> 081280565550</li>
-              <li><strong>Email:</strong> hendra.kurniawan.tara@gmail.com</li>
-              <li><strong>Website:</strong> www.kjaglobalasia.co.id</li>
-              <li><strong>NPWP:</strong> 1000 0000 0817 9267</li>
-              <li>
-                <strong>Alamat:</strong> Ruko La Vallee, Jl. Boulevard Citra Garden Serpong Blok B17/72,
-                Cisauk, Kab. Tangerang, Banten, 15344
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-darkgreen py-12 text-gray-200">
-      <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-12 lg:px-8">
-        <div class="lg:col-span-5">
-          <h2 class="font-playfair text-2xl text-white">Kantor Jasa Akuntan Global Asia</h2>
-          <p class="mt-3 text-sm leading-relaxed">
-            Layanan akuntansi, perpajakan, dan advisory bisnis untuk membantu perusahaan menjaga kepatuhan, meningkatkan kejelasan keuangan, dan mendukung pertumbuhan yang berkelanjutan.
-          </p>
-        </div>
-        <div class="lg:col-span-3">
-          <h3 class="text-sm font-semibold uppercase tracking-wide text-gold">Navigasi</h3>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a href="#tentang" class="footer-link">Tentang</a></li>
-            <li><a href="#layanan" class="footer-link">Layanan</a></li>
-            <li><a href="#keunggulan" class="footer-link">Keunggulan</a></li>
-            <li><a href="#kontak" class="footer-link">Kontak</a></li>
-          </ul>
-        </div>
-        <div class="lg:col-span-4">
-          <h3 class="text-sm font-semibold uppercase tracking-wide text-gold">Kontak</h3>
-          <ul class="mt-3 space-y-2 text-sm leading-relaxed">
-            <li>081280565550</li>
-            <li>hendra.kurniawan.tara@gmail.com</li>
-            <li>www.kjaglobalasia.co.id</li>
-          </ul>
+        <div class="nav-links desktop-only">
+          <a href="#tentang">Tentang</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#keunggulan">Keunggulan</a>
+          <a href="#kontak">Kontak</a>
+          <a class="btn btn-gold" href="https://wa.me/6281280565550" target="_blank" rel="noopener">Konsultasi WhatsApp</a>
         </div>
       </div>
-      <div class="mx-auto mt-8 max-w-7xl border-t border-white/10 px-6 pt-6 text-xs text-gray-400 lg:px-8">
-        © 2026 Kantor Jasa Akuntan Global Asia. Seluruh hak cipta dilindungi.
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#kontak">Kontak</a>
+        <a class="btn btn-gold" href="https://wa.me/6281280565550" target="_blank" rel="noopener">Konsultasi WhatsApp</a>
       </div>
-    </footer>
-  </body>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="fade-up">
+          <p class="eyebrow">Akuntansi • Pajak • Advisory Bisnis</p>
+          <h1>Mitra Profesional untuk Kepatuhan Pajak dan Kejelasan Keuangan Perusahaan</h1>
+          <p class="lead">Kantor Jasa Akuntan Global Asia mendampingi pemilik usaha, direktur, dan manajemen perusahaan dalam pengelolaan akuntansi dan perpajakan yang akurat, patuh regulasi, serta terukur untuk mendukung keputusan strategis.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/6281280565550" target="_blank" rel="noopener">Jadwalkan Konsultasi</a>
+            <a class="btn btn-outline" href="#layanan">Lihat Layanan</a>
+          </div>
+        </div>
+
+        <aside class="hero-profile fade-up">
+          <h2>Profil Resmi Perusahaan</h2>
+          <ul>
+            <li><strong>Nama:</strong> Kantor Jasa Akuntan Global Asia</li>
+            <li><strong>Owner:</strong> Hendra Kurniawan, CA</li>
+            <li><strong>Nomor Izin:</strong> 306/MK/SK.5/2025</li>
+            <li><strong>Bentuk Usaha:</strong> Perseroan Terbatas (PT)</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="tentang" class="section">
+      <div class="container two-col">
+        <div class="fade-up">
+          <p class="section-label">Tentang KJA Global Asia</p>
+          <h2>Pendampingan Akuntansi dan Perpajakan yang Terstruktur</h2>
+          <p>Kami menyediakan layanan profesional untuk membantu perusahaan menjaga ketertiban administrasi keuangan, akurasi laporan, dan kepatuhan perpajakan sesuai ketentuan yang berlaku.</p>
+          <p>Dengan pendekatan sistematis dan komunikasi yang jelas, kami membantu manajemen memperoleh informasi keuangan yang relevan untuk pengambilan keputusan bisnis yang lebih prudent.</p>
+        </div>
+        <div class="fade-up">
+          <img src="public/images/office.jpg" alt="Aktivitas profesional Kantor Jasa Akuntan Global Asia" class="rounded-image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="layanan" class="section section-muted">
+      <div class="container">
+        <div class="section-head fade-up">
+          <p class="section-label">Layanan Utama</p>
+          <h2>Ruang Lingkup Layanan Profesional</h2>
+          <p>Setiap layanan kami dirancang untuk memperkuat kepatuhan, meningkatkan kejelasan informasi keuangan, dan mendukung efisiensi operasional perusahaan.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card fade-up"><h3>Jasa Akuntansi</h3><p>Pencatatan transaksi dan penyusunan laporan periodik yang akurat sebagai dasar evaluasi kinerja keuangan perusahaan.</p></article>
+          <article class="card fade-up"><h3>Jasa Perpajakan</h3><p>Perhitungan, penyetoran, dan pelaporan pajak secara tertib sesuai regulasi perpajakan yang berlaku.</p></article>
+          <article class="card fade-up"><h3>Penyusunan Laporan Keuangan</h3><p>Penyajian laporan laba rugi, posisi keuangan, dan arus kas untuk kebutuhan manajemen maupun pihak eksternal.</p></article>
+          <article class="card fade-up"><h3>Konsultasi Kepatuhan Pajak</h3><p>Identifikasi risiko pajak dan rekomendasi perbaikan agar administrasi perpajakan perusahaan lebih siap dan konsisten.</p></article>
+          <article class="card fade-up"><h3>Pendampingan Administrasi Keuangan</h3><p>Pendampingan alur dokumen dan SOP administrasi agar proses kerja keuangan menjadi lebih rapi dan efisien.</p></article>
+          <article class="card fade-up"><h3>Advisory / Konsultasi Bisnis</h3><p>Dukungan konsultatif berbasis data keuangan untuk membantu manajemen menentukan langkah bisnis yang tepat.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="keunggulan" class="section">
+      <div class="container">
+        <div class="section-head fade-up">
+          <p class="section-label">Mengapa Memilih Kami</p>
+          <h2>Fokus pada Kepatuhan, Ketelitian, dan Kepercayaan</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature fade-up"><h3>Patuh Regulasi</h3><p>Seluruh proses layanan diarahkan untuk menjaga kepatuhan pajak dan tata kelola administrasi keuangan perusahaan.</p></article>
+          <article class="feature fade-up"><h3>Ketelitian Data</h3><p>Setiap dokumen ditelaah secara cermat agar laporan keuangan lebih andal dan dapat dipertanggungjawabkan.</p></article>
+          <article class="feature fade-up"><h3>Komunikasi Profesional</h3><p>Pembaruan pekerjaan disampaikan secara jelas agar manajemen memahami progres dan prioritas tindak lanjut.</p></article>
+          <article class="feature fade-up"><h3>Dukungan Strategis</h3><p>Kami tidak hanya mengelola administrasi, tetapi juga memberikan perspektif untuk mendukung keputusan bisnis.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="stats-grid fade-up">
+          <div><h3>2025</h3><p>Nomor Izin Resmi: 306/MK/SK.5/2025</p></div>
+          <div><h3>PT</h3><p>Bentuk usaha: Perseroan Terbatas</p></div>
+          <div><h3>CA</h3><p>Dipimpin oleh Hendra Kurniawan, CA</p></div>
+          <div><h3>NPWP</h3><p>1000 0000 0817 9267</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="container contact-grid">
+        <div class="fade-up">
+          <p class="section-label">Konsultasi</p>
+          <h2>Diskusikan Kebutuhan Akuntansi dan Perpajakan Perusahaan Anda</h2>
+          <p>Hubungi kami untuk mendapatkan pendampingan profesional yang membantu perusahaan menjaga kepatuhan, ketertiban laporan, dan efisiensi administrasi keuangan.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/6281280565550" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+            <a class="btn btn-light" href="mailto:hendra.kurniawan.tara@gmail.com">Kirim Email Resmi</a>
+          </div>
+        </div>
+
+        <aside class="contact-card fade-up">
+          <h3>Informasi Kontak Resmi</h3>
+          <ul>
+            <li><strong>Nama:</strong> Kantor Jasa Akuntan Global Asia</li>
+            <li><strong>Owner:</strong> Hendra Kurniawan, CA</li>
+            <li><strong>Nomor Izin:</strong> 306/MK/SK.5/2025</li>
+            <li><strong>Telepon/WhatsApp:</strong> 081280565550</li>
+            <li><strong>Email:</strong> hendra.kurniawan.tara@gmail.com</li>
+            <li><strong>Website:</strong> www.kjaglobalasia.co.id</li>
+            <li><strong>NPWP:</strong> 1000 0000 0817 9267</li>
+            <li><strong>Alamat:</strong> Ruko La Vallee, Jl. Boulevard Citra Garden Serpong Blok B17/72, Cisauk, Kab. Tangerang, Banten, 15344</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Kantor Jasa Akuntan Global Asia</h2>
+        <p>Layanan akuntansi, perpajakan, dan advisory bisnis yang berorientasi pada kepatuhan, ketelitian, dan kepercayaan jangka panjang.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <ul>
+          <li>081280565550</li>
+          <li>hendra.kurniawan.tara@gmail.com</li>
+          <li>www.kjaglobalasia.co.id</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 Kantor Jasa Akuntan Global Asia. Seluruh hak cipta dilindungi.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

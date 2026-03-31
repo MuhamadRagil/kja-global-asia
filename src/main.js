@@ -1,63 +1,51 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-import './style.css'
 
 const navbar = document.getElementById('navbar')
+const mobileMenuButton = document.getElementById('mobile-menu-button')
+const mobileMenu = document.getElementById('mobile-menu')
+const mobileLinks = document.querySelectorAll('#mobile-menu a')
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.remove('bg-transparent')
-    navbar.classList.add('bg-white', 'shadow-lg')
-    navbar.querySelectorAll('a').forEach(link => link.classList.remove('text-white'))
-    navbar.querySelectorAll('a').forEach(link => link.classList.add('text-gray-800'))
-    navbar.querySelector('h1').classList.remove('text-white')
-    navbar.querySelector('h1').classList.add('text-primary')
-  } else {
-    navbar.classList.add('bg-transparent')
-    navbar.classList.remove('bg-white', 'shadow-lg')
-    navbar.querySelectorAll('a').forEach(link => link.classList.add('text-white'))
-    navbar.querySelectorAll('a').forEach(link => link.classList.remove('text-gray-800'))
-    navbar.querySelector('h1').classList.add('text-white')
-    navbar.querySelector('h1').classList.remove('text-primary')
-  }
-})
+const updateNavbarState = () => {
+  const scrolled = window.scrollY > 24
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  if (!navbar) return
 
-setupCounter(document.querySelector('#counter'))
+  navbar.classList.toggle('bg-darkgreen/95', scrolled)
+  navbar.classList.toggle('backdrop-blur', scrolled)
+  navbar.classList.toggle('shadow-lg', scrolled)
+  navbar.classList.toggle('border-b', scrolled)
+  navbar.classList.toggle('border-white/10', scrolled)
+}
+
+window.addEventListener('scroll', updateNavbarState)
+window.addEventListener('load', updateNavbarState)
+
+if (mobileMenuButton && mobileMenu) {
+  mobileMenuButton.addEventListener('click', () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'
+    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded))
+    mobileMenu.classList.toggle('hidden', isExpanded)
+  })
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden')
+      mobileMenuButton.setAttribute('aria-expanded', 'false')
+    })
+  })
+}
 
 const faders = document.querySelectorAll('.fade-up')
 
-const appearOptions = {
-  threshold: 0.2
-}
+const appearOnScroll = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      entry.target.classList.add('show')
+      observer.unobserve(entry.target)
+    })
+  },
+  { threshold: 0.2 }
+)
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return
-    entry.target.classList.add('show')
-    observer.unobserve(entry.target)
-  })
-}, appearOptions)
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader)
-})
+faders.forEach((fader) => appearOnScroll.observe(fader))

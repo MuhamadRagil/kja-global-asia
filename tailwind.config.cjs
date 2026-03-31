@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         inter: ['Inter', 'sans-serif'],
+      },
+      boxShadow: {
+        soft: '0 12px 30px -18px rgba(15, 23, 42, 0.45)'
       }
     },
   },
